@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://www.abutex.cl/</loc>
+    <lastmod>2026-11-04</lastmod>
+    <priority>1.0</priority>
+    <image:image><image:loc>https://www.abutex.cl/img/hoteleria-dormitorio.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.abutex.cl/img/hero-panos-de-aseo.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://www.abutex.cl/aseo.html</loc>
+    <lastmod>2026-11-04</lastmod>
+    <priority>0.9</priority>
+    <image:image><image:loc>https://www.abutex.cl/img/hero-panos-de-aseo.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.abutex.cl/img/pano-de-microfibra.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.abutex.cl/img/trapero-de-microfibra.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.abutex.cl/img/pano-de-gasa.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.abutex.cl/img/pano-de-moleton.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://www.abutex.cl/hoteleria.html</loc>
+    <lastmod>2026-11-04</lastmod>
+    <priority>0.9</priority>
+    <image:image><image:loc>https://www.abutex.cl/img/hoteleria-dormitorio.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.abutex.cl/img/toalla-blanca-bano.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.abutex.cl/img/toallas-color.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.abutex.cl/img/toallas-jacquard.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.abutex.cl/img/piso-de-bano.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.abutex.cl/img/cama-sabanas.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://www.abutex.cl/empresa.html</loc>
+    <lastmod>2026-11-04</lastmod>
+    <priority>0.7</priority>
+    <image:image><image:loc>https://www.abutex.cl/img/toallas-apiladas.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://www.abutex.cl/contacto.html</loc>
+    <lastmod>2026-11-04</lastmod>
+    <priority>0.8</priority>
+  </url>
+</urlset>
