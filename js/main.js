@@ -53,6 +53,8 @@
       var btn=cf.querySelector('button[type=submit]'); btn.disabled=true; btn.textContent='Enviando...';
       var data={_subject:'Descarga catálogo Challatin: '+cf.empresa.value.trim(),_cc:'aorrego@challatin.cl',_template:'table',_captcha:'false',_replyto:cf.email.value.trim(),_honey:cf._honey.value};
       ['nombre','empresa','email','telefono','tipo','comuna'].forEach(function(k){data[L[k]||k]=cf[k].value.trim()});
+      data['Acepta recibir publicidad']=cf.consentimiento.checked?'Sí':'No';
+      data['Fecha de envío']=new Date().toLocaleString('es-CL');
       function done(){
         document.getElementById('catalogFields').hidden=true;
         var box=document.getElementById('catalogOk'); box.hidden=false;

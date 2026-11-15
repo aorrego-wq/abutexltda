@@ -404,3 +404,5 @@ form .btn{width:100%;margin-top:6px}
 @media (max-width:860px){.catalog-top{grid-template-columns:1fr;gap:28px}.cat-sheets{grid-template-columns:repeat(3,1fr)}}
 @media (max-width:560px){.cat-sheets{grid-template-columns:repeat(2,1fr);gap:10px}}
 .hero-media .hero-badge img{box-shadow:none;border-radius:0;aspect-ratio:auto;max-height:none;object-fit:contain;background:none;mix-blend-mode:multiply}
+.consent{display:flex;gap:10px;align-items:flex-start;font-weight:500;font-size:.82rem;line-height:1.45;color:var(--muted);margin:2px 0 14px;cursor:pointer}
+.consent input{width:auto;margin-top:3px;accent-color:var(--blue);flex:none}
