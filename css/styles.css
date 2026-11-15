@@ -386,3 +386,21 @@ form .btn{width:100%;margin-top:6px}
 .line-card.bebe img{object-fit:contain;background:#fff;object-position:center 15%}
 @media (max-width:1020px){.lines.three{grid-template-columns:1fr 1fr}}
 @media (max-width:860px){.lines.three{grid-template-columns:1fr}}
+
+/* Catálogo Challatin */
+.catalog{background:var(--pink-50)}
+.catalog-top{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;margin-bottom:64px}
+.brand-logo{width:150px;height:auto;margin:-20px 0 0 -12px;mix-blend-mode:multiply}
+.catalog-form h3{margin-bottom:18px}
+.catalog-ok{text-align:center;padding:10px 0}
+.catalog-ok strong{display:block;font-size:1.15rem;color:var(--blue-900);margin-bottom:6px}
+.catalog-ok p{color:var(--muted);font-size:.9rem;margin-bottom:12px}
+.cat-sheets{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+.cat-sheet{background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;text-decoration:none!important;color:var(--blue-900);transition:box-shadow .2s,transform .2s}
+.cat-sheet:hover{box-shadow:var(--shadow);transform:translateY(-2px)}
+.cat-sheet img{width:100%;aspect-ratio:636/900;object-fit:cover}
+.cat-sheet span{display:block;padding:10px 12px;font-size:.82rem;font-weight:600;line-height:1.3}
+@media (max-width:1020px){.cat-sheets{grid-template-columns:repeat(4,1fr)}}
+@media (max-width:860px){.catalog-top{grid-template-columns:1fr;gap:28px}.cat-sheets{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:560px){.cat-sheets{grid-template-columns:repeat(2,1fr);gap:10px}}
+.hero-media .hero-badge img{box-shadow:none;border-radius:0;aspect-ratio:auto;max-height:none;object-fit:contain;background:none;mix-blend-mode:multiply}
