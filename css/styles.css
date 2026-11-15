@@ -374,3 +374,15 @@ form .btn{width:100%;margin-top:6px}
 .page-hero.simple .wrap{gap:0;justify-items:center}
 .page-hero.simple .lead{max-width:680px}
 @media (max-width:860px){.line-card::before{background:linear-gradient(180deg,rgba(11,31,92,.1) 0%,rgba(11,31,92,.93) 45%)}}
+
+/* Línea bebé (Challatin) */
+:root{--pink:#d63f86;--pink-50:#fff0f6}
+.bebe-hero{background:linear-gradient(180deg,var(--pink-50) 0%,#fff 100%)}
+.t-bebe .eyebrow{background:var(--pink-50);color:#b02e6d}
+.t-bebe .hero-media img{object-fit:contain;background:#fff}
+.t-bebe .tw img{object-fit:contain;background:#fff;aspect-ratio:1/1;padding:10px}
+.line-card.bebe .eyebrow{background:#ffb8d6}
+.lines.three{grid-template-columns:repeat(3,1fr)}
+.line-card.bebe img{object-fit:contain;background:#fff;object-position:center 15%}
+@media (max-width:1020px){.lines.three{grid-template-columns:1fr 1fr}}
+@media (max-width:860px){.lines.three{grid-template-columns:1fr}}
