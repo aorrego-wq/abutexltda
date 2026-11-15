@@ -39,7 +39,7 @@
       window.open('https://wa.me/'+WA+'?text='+encodeURIComponent(t),'_blank','noopener');
     });
   });
-  /* Catálogo Challatin: envía los datos por correo (FormSubmit) y habilita la descarga */
+  /* Catálogo Challatin: envía los datos por correo (FormSubmit) a aorrego@ con copia a gerencia@ y habilita la descarga */
   var cf=document.getElementById('catalogForm');
   if(cf){
     cf.addEventListener('submit',function(e){
@@ -51,7 +51,7 @@
       });
       if(!ok) return;
       var btn=cf.querySelector('button[type=submit]'); btn.disabled=true; btn.textContent='Enviando...';
-      var data={_subject:'Descarga catálogo Challatin: '+cf.empresa.value.trim(),_cc:'aorrego@challatin.cl',_template:'table',_captcha:'false',_replyto:cf.email.value.trim(),_honey:cf._honey.value};
+      var data={_subject:'Descarga catálogo Challatin: '+cf.empresa.value.trim(),_cc:'gerencia@challatin.cl',_template:'table',_captcha:'false',_replyto:cf.email.value.trim(),_honey:cf._honey.value};
       ['nombre','empresa','email','telefono','tipo','comuna'].forEach(function(k){data[L[k]||k]=cf[k].value.trim()});
       data['Acepta recibir publicidad']=cf.consentimiento.checked?'Sí':'No';
       data['Fecha de envío']=new Date().toLocaleString('es-CL');
@@ -61,7 +61,7 @@
         track('catalogo-formulario');
         box.querySelector('a').click();
       }
-      fetch('https://formsubmit.co/ajax/gerencia@challatin.cl',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(data)})
+      fetch('https://formsubmit.co/ajax/aorrego@challatin.cl',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(data)})
         .then(done,done);
     });
   }
