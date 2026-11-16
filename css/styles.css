@@ -428,3 +428,43 @@ form .btn{width:100%;margin-top:6px}
 @media (max-width:1020px){.steps{grid-template-columns:1fr 1fr}.steps::before{display:none}}
 @media (max-width:560px){.steps{grid-template-columns:1fr}}
 .steps .step-ic{color:#fff;line-height:1}
+
+/* ===== Catálogo de hotelería por categorías ===== */
+.filters{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin:0 auto 40px;max-width:900px}
+.chip{font-family:inherit;font-weight:600;font-size:.88rem;padding:10px 16px;border-radius:999px;border:1.5px solid var(--line);background:#fff;color:var(--blue-900);cursor:pointer;transition:background .2s,border-color .2s,color .2s}
+.chip:hover{border-color:var(--blue)}
+.chip.on{background:var(--blue);border-color:var(--blue);color:#fff}
+.cat{scroll-margin-top:90px}
+.cat+.cat{margin-top:64px}
+.cat[hidden]{display:none}
+.highlight{display:grid;gap:6px;background:var(--blue-50);border-left:4px solid var(--blue);border-radius:14px;padding:18px 22px;margin:0 0 24px}
+.highlight strong{color:var(--blue-900);font-size:1.02rem}
+.highlight span{color:var(--muted);font-size:.93rem}
+.tag-hilos{display:inline-block;align-self:flex-start;background:var(--yellow);color:var(--blue-900);font-size:.72rem;font-weight:700;letter-spacing:.04em;padding:4px 10px;border-radius:999px;margin-bottom:10px}
+.tw-body .spec{font-weight:700;color:var(--blue);font-size:.9rem;margin:-2px 0 6px}
+.tw-body > p{min-height:2.9em}
+.thread-grid{margin-bottom:26px}
+/* Cobertura nacional */
+.coverage{background:var(--soft)}
+.coverage .lead strong{color:var(--blue-900);display:block;margin-bottom:6px}
+.cov-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.cov-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column}
+.cov-card img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.cov-card div{padding:18px 20px 22px}
+.cov-card h3{font-size:1.08rem;color:var(--blue-900);margin-bottom:6px}
+.cov-card p{font-size:.9rem;color:var(--muted)}
+.cov-note{display:flex;align-items:center;justify-content:center;gap:10px;margin:30px auto 0;background:var(--blue);color:#fff;font-weight:700;border-radius:999px;padding:14px 24px;width:fit-content;max-width:100%;text-align:center}
+.cov-note svg{flex:none;color:var(--yellow)}
+@media (max-width:1020px){.cov-grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:560px){
+  .cov-grid{grid-template-columns:1fr}
+  .filters{justify-content:flex-start;flex-wrap:nowrap;overflow-x:auto;padding-bottom:6px;margin-inline:-16px;padding-inline:16px;scrollbar-width:none}
+  .filters::-webkit-scrollbar{display:none}
+  .chip{flex:none}
+  .tw-body > p{min-height:0}
+  .cov-note{border-radius:16px;font-size:.92rem}
+}
+/* Botón flotante de WhatsApp: aparece al bajar y no tapa el contenido final */
+.wa-float{opacity:0;pointer-events:none;transform:translateY(14px);transition:opacity .3s,transform .3s}
+body.scrolled .wa-float{opacity:1;pointer-events:auto;transform:none}
+@media (max-width:640px){.wa-float{width:52px;height:52px;right:14px;bottom:14px}.wa-float svg{width:28px;height:28px}.foot{padding-bottom:84px}}

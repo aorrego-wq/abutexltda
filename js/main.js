@@ -65,4 +65,16 @@
         .then(done,done);
     });
   }
+  /* Botón flotante de WhatsApp: visible al bajar */
+  var onScrollWa=function(){document.body.classList.toggle('scrolled',window.scrollY>500)};
+  onScrollWa(); window.addEventListener('scroll',onScrollWa,{passive:true});
+
+  /* Filtro de categorías del catálogo de hotelería */
+  var chipsF=document.querySelectorAll('.chip[data-f]');
+  [].forEach.call(chipsF,function(c){
+    c.addEventListener('click',function(){
+      [].forEach.call(chipsF,function(x){x.classList.toggle('on',x===c)});
+      [].forEach.call(document.querySelectorAll('.cat[data-cat]'),function(k){k.hidden=!(c.dataset.f==='all'||k.dataset.cat===c.dataset.f)});
+    });
+  });
 })();
