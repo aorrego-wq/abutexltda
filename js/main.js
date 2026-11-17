@@ -50,7 +50,7 @@
         el.style.borderColor=bad?'#e0322b':''; if(bad&&ok){el.focus();ok=false}
       });
       if(!ok) return;
-      var btn=cf.querySelector('button[type=submit]'); btn.disabled=true; btn.textContent='Enviando...';
+      var btn=cf.querySelector('button[type=submit]'); btn.disabled=true;
       var data={_subject:'Descarga catálogo Challatin: '+cf.empresa.value.trim(),_cc:'gerencia@challatin.cl',_template:'table',_captcha:'false',_replyto:cf.email.value.trim(),_honey:cf._honey.value};
       ['nombre','empresa','email','telefono','tipo','comuna'].forEach(function(k){data[L[k]||k]=cf[k].value.trim()});
       data['Acepta recibir publicidad']=cf.consentimiento.checked?'Sí':'No';
@@ -61,8 +61,12 @@
         track('catalogo-formulario');
         box.querySelector('a').click();
       }
-      fetch('https://formsubmit.co/ajax/aorrego@challatin.cl',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(data)})
-        .then(done,done);
+      // Los datos se envían en segundo plano (keepalive) y la descarga se habilita de inmediato,
+      // así el formulario no queda esperando si FormSubmit tarda en responder.
+      try{
+        fetch('https://formsubmit.co/ajax/aorrego@challatin.cl',{method:'POST',keepalive:true,headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(data)}).catch(function(){});
+      }catch(err){}
+      done();
     });
   }
   /* Botón flotante de WhatsApp: visible al bajar */
